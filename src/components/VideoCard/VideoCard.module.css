@@ -1,0 +1,52 @@
+.videoCard {
+  width: 290px;
+  margin: 10px;
+}
+
+.videoCard__mini {
+  width: 249px;
+  margin: 10px;
+}
+
+.image {
+  width: inherit;
+  object-fit: contain;
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
+.Avatar {
+  height: 30px !important;
+  width: 30px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.text {
+  margin-left: 15px;
+}
+
+.text * {
+  margin: 1px;
+  align-items: center;
+}
+.text > a {
+  margin: 0;
+  color: #000;
+  text-decoration: none;
+}
+
+.text a > h4 {
+  font-size: 14px;
+  margin: 1px;
+}
+
+.text > p {
+  font-size: 14px;
+  color: gray;
+}

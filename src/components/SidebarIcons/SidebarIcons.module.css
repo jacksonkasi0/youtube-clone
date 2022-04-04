@@ -1,0 +1,33 @@
+.sidebarIcons {
+  display: flex;
+  align-items: center;
+  grid-gap: 1.5rem;
+  font-weight: 500;
+}
+
+.sidebarIcons:hover {
+  background-color: #ebe8e8;
+  transition-duration: 0.5s;
+}
+
+.mini {
+  flex-direction: column;
+  font-size: x-small;
+  grid-gap: 2px;
+  transition-duration: 0.5s;
+}
+
+.videInfo {
+  background-color: white;
+  width: fit-content;
+  color: #000;
+  grid-gap: 5px;
+}
+
+.videInfo  svg{
+  color: #606060 !important
+}
+
+.videInfo:hover {
+  background-color: white;
+}

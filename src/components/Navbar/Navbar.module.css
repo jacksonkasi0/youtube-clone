@@ -1,0 +1,36 @@
+
+.navbar {
+  position: fixed;
+  top: 0;
+  transition: top 0.3s;
+  box-shadow: none !important;
+  border-bottom: 1px solid #d3d3d3;
+  background-color: #fff !important;
+}
+
+.logo {
+  display: flex;
+  flex: 1;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: 8.2rem;
+  margin-left: -11px;
+}
+
+.NavIcons svg {
+  color: #000 !important;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 500px) {
+  .NavIcons {
+    display: none;
+  }
+}

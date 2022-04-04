@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.container img {
+  height: 60px;
+  width: 8.2rem;
+  margin-left: -11px;
+}

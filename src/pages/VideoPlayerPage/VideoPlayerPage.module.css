@@ -1,0 +1,20 @@
+.videpPlayer {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+.videoDetails {
+  flex: 0.8;
+}
+
+.suggested {
+  flex: 0.2;
+  margin-top: 0 !important;
+}
+
+.videoInfo {
+  flex-direction: row !important;
+}

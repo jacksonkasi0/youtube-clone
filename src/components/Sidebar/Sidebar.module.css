@@ -1,0 +1,37 @@
+.sidebar {
+  width: fit-content;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+
+}
+
+.mini{
+  width:4.5rem;
+  overflow: hidden;
+}
+
+.title{
+  color: #606060;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 25px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background: #606060;
+}

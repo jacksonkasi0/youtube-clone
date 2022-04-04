@@ -1,0 +1,46 @@
+.videoRow {
+  display: flex;
+  margin-bottom: 25px;
+  max-width: 900px;
+}
+
+@media screen and (max-width: 600px) {
+  .videoRow {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .text {
+    margin: 0 !important;
+  }
+}
+
+.videoRow > img {
+  object-fit: contain;
+  width: 246px;
+  height: 138px;
+}
+
+.text * {
+  margin: 0;
+}
+
+.text {
+  margin-left: 14px;
+}
+
+.text > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #606060;
+}
+
+.headline {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #606060;
+}

@@ -1,0 +1,29 @@
+.App {
+  display: flex;
+  position: absolute;
+  top: -12px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+hr {
+  height: 1px !important;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hr {
+  padding: .1px !important;
+  background: lightgray;
+}

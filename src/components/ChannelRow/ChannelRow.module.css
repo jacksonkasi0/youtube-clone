@@ -1,0 +1,33 @@
+.channelRow {
+  align-items: center;
+}
+
+.logo {
+  height: 150px !important;
+  width: 150px !important;
+  margin: 15px 20px;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .channelRow {
+    display: flex;
+    justify-content: center;
+  }
+  .text {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+
+.text * {
+  margin: 5px;
+  width: fit-content;
+}

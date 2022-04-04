@@ -1,0 +1,65 @@
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.status > p {
+  font-weight: 500;
+}
+
+.headline {
+  font-size: x-small;
+}
+
+.likes {
+  display: flex;
+  flex-direction: row;
+}
+
+.channel {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.subs {
+  font-weight: 500;
+}
+
+.subscribe {
+  color: #fff !important;
+  background: #ee0505 !important;
+  font-weight: 500;
+  padding: 2px 10px !important;
+  border-radius: 0 !important;
+}
+
+.desc {
+  font-size: large;
+  font-weight: 500;
+  padding-right: 20px !important;
+  overflow: hidden;
+}
+
+.desc pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}

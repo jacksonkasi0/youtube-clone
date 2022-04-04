@@ -1,0 +1,28 @@
+.home {
+  display: flex;
+  flex: 1;
+  background-color: #f9f9f9;
+}
+
+.recommendedVideos {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.recommendedVideos::-webkit-scrollbar {
+  width: 10px;
+}
+
+.recommendedVideos::-webkit-scrollbar-track {
+  background-color: gainsboro;
+}
+
+.recommendedVideos::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 25px;
+}
