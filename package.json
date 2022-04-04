@@ -1,6 +1,7 @@
 {
-  "name": "youtube",
-  "version": "2.0.0",
+  "name": "youtube-clone_with_deepgram",
+  "version": "2.1.0",
+  "author": "jackson kasi",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.8.2",
