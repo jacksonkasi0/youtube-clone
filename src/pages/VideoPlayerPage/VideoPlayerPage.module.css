@@ -18,3 +18,9 @@
 .videoInfo {
   flex-direction: row !important;
 }
+
+.subBtn{
+  color: #fff !important;
+  background-color: #000 !important;
+  font-weight: 500;
+}

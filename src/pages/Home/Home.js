@@ -4,12 +4,14 @@ import Style from './Home.module.css';
 import axios from 'axios';
 import VideoCard from '../../components/VideoCard/VideoCard';
 import apiHelper from '../../api/apiHelper';
+import { useSelector } from 'react-redux';
 
 const APIKEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
-const HOME_VIDEO_URL = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=${24}&regionCode=${'IN'}&key=${APIKEY}`;
-
 const Home = () => {
+  const { countrieIp } = useSelector((state) => state.useIpApi);
+  const HOME_VIDEO_URL = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=${24}&regionCode=${countrieIp}&key=${APIKEY}`;
+
   const [videoCards, setVideoCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setError] = useState(false);
@@ -24,7 +26,7 @@ const Home = () => {
       setError(true);
     }
     return () => clearTimeout(timerId);
-  }, []);
+  }, [countrieIp]);
 
   const createVideoCards = async (youtubeData) => {
     const newVideoCards = await apiHelper({

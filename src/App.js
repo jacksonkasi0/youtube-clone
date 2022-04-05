@@ -9,11 +9,13 @@ import MiniSidebar from './components/MiniSidebar/MiniSidebar';
 import { Box } from '@mui/material';
 import SearchPage from './pages/SearchPage/SearchPage';
 import VideoPlayerPage from './pages/VideoPlayerPage/VideoPlayerPage';
+// import GetIP from './api/ipAddress';
 
 const App = () => {
   const { sidebarView, screenWidth } = useSelector(
     (state) => state.appUtilities
   );
+
 
   return (
     <Router>
