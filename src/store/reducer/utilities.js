@@ -2,8 +2,6 @@ const initialState = {
   sidebarIcon: 'Home',
   sidebarView: false,
   screenWidth: window.innerWidth,
-  micSate: false,
-  searchBoxText: '',
 };
 
 const setUtilities = (state = initialState, action) => {
@@ -22,16 +20,6 @@ const setUtilities = (state = initialState, action) => {
       return {
         ...state,
         screenWidth: action.payload,
-      };
-    case 'MIC_STATE':
-      return {
-        ...state,
-        micSate: action.payload,
-      };
-    case 'SEARCH_BOX_TEXT':
-      return {
-        ...state,
-        searchBoxText: action.payload,
       };
     default:
       return state;

@@ -3,12 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
-import setUtilities from './store/reducer/utilities';
-import { combineReducers, createStore } from 'redux';
-
-const rootReducer = combineReducers({
-  appUtilities: setUtilities,
-});
+import { createStore } from 'redux';
+import rootReducer from './store/reducer';
 
 const store = createStore(rootReducer);
 

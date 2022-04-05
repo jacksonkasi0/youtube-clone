@@ -4,19 +4,21 @@ import Style from './RecommendedVideos.module.css';
 import apiHelper from '../../api/apiHelper';
 import VideoCard from '../VideoCard/VideoCard';
 import { Alert, CircularProgress } from '@mui/material';
+import { useSelector } from 'react-redux';
+
+const APIKEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 const RecommendedVideos = () => {
+  const { countrieIp } = useSelector((state) => state.useIpApi);
+  const RECOMMENDED_VIDEO_URL = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=${24}&regionCode=${countrieIp}&key=${APIKEY}`;
+
   const [videoCards, setVideoCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   useEffect(async () => {
     let timerId;
     try {
-      const response = await axios.get(
-        `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=${10}&regionCode=${'IN'}&key=${
-          process.env.REACT_APP_YOUTUBE_API_KEY
-        }`
-      );
+      const response = await axios.get(RECOMMENDED_VIDEO_URL);
       const createVideos = await apiHelper({
         Type: 'homePage',
         youtubeData: response.data.items,

@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
 import apiHelper from '../../api/apiHelper';
-import { Alert, Box } from '@mui/material';
+import { Alert, Box, Button } from '@mui/material';
 import Style from './VideoPlayerPage.module.css';
 import Video from '../../components/Video/Video';
 import VideoInfo from '../../components/VideoInfo/VideoInfo';
 import RecommendedVideos from '../../components/RecommendedVideos/RecommendedVideos';
 import Loading from '../../components/Loading/Loading';
+import { subtitleState, setMic } from '../../store/action/deepgram';
+import Subtitle from '../../components/Subtitle/Subtitle';
 
 const APIKEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 const VideoPlayerPage = () => {
   const { videoId } = useParams();
+  const dispatch = useDispatch();
+
+  const { subState, micSate } = useSelector((state) => state.useDeepgram);
+
   const [videoInfo, setVideoInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -58,6 +65,20 @@ const VideoPlayerPage = () => {
         <Box className={Style.video}>
           {isLoading ? <Loading /> : <Video videoId={videoId} />}
         </Box>
+        <Box>
+          <Button
+            className={Style.subBtn}
+            onClick={() => {
+              if (!subState) dispatch(subtitleState(!subState));
+              if (micSate) {
+                dispatch(setMic(false));
+                console.log('stoped search mic');
+              }
+            }}
+          >
+            show me subtitles✨
+          </Button>
+        </Box>
         <Box className={Style.videoInfo}>
           {!isLoading ? (
             <VideoInfo
@@ -74,6 +95,7 @@ const VideoPlayerPage = () => {
             />
           ) : null}
         </Box>
+        <Subtitle />
       </Box>
       <Box className={Style.suggested}>
         <RecommendedVideos />

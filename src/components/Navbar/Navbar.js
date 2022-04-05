@@ -13,22 +13,28 @@ import {
   NotificationsNone,
   AppsRounded,
   VideoCall,
-  CloseRounded
+  CloseRounded,
 } from '@mui/icons-material';
 import SearchBox from '../SearchBox/SearchBox';
+import { changeSidebar, setScreenWidth } from '../../store/action/utilities';
 import {
-  changeSidebar,
-  setScreenWidth,
   setMic,
   setSearchText,
-} from '../../store/action/utilities';
+  subtitleState,
+} from '../../store/action/deepgram';
 import MicListening from '../Mic/MicListening';
+import GetIP from '../../api/ipAddress';
 
 const Navbar = () => {
   const dispatch = useDispatch();
 
-  const { sidebarView, screenWidth, micSate, searchBoxText } = useSelector(
+  GetIP()
+
+  const { sidebarView, screenWidth } = useSelector(
     (state) => state.appUtilities
+  );
+  const { micSate, searchBoxText, subState } = useSelector(
+    (state) => state.useDeepgram
   );
 
   const [visible, setVisible] = useState('none');
@@ -91,13 +97,18 @@ const Navbar = () => {
             sx={{ color: '#000', display: { xs: 'flex', md: 'none' } }}
             onClick={toggleBottomSearch}
           >
-            {visible==='none' ? <SearchRounded /> : <CloseRounded/>}
+            {visible === 'none' ? <SearchRounded /> : <CloseRounded />}
           </IconButton>
 
           <IconButton
             size='large'
             sx={{ color: '#000', bgcolor: '#eeeeee' }}
             onClick={() => {
+              if (subState) {
+                dispatch(subtitleState(false));
+                console.log('stoped subtitle mic');
+              }
+
               dispatch(setMic(!micSate));
             }}
           >
@@ -127,6 +138,8 @@ const Navbar = () => {
         setMic={setMic}
         setSearchText={setSearchText}
         searchBoxText={searchBoxText}
+        subtitleState={subtitleState}
+        subState={subState}
       />
     </AppBar>
   );

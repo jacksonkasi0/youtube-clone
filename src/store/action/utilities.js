@@ -18,17 +18,3 @@ export const setScreenWidth = (val) => {
     payload: val,
   };
 };
-
-export const setMic = (bool) => {
-  return {
-    type: 'MIC_STATE',
-    payload: bool,
-  };
-};
-
-export const setSearchText = (text)=>{
-  return {
-    type: "SEARCH_BOX_TEXT",
-    payload:text
-  }
-}

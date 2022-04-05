@@ -1,0 +1,28 @@
+.subtitle {
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+  background: whitesmoke;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  transition: ease-in 1s;
+  transition-duration: 0.5s;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.subtitle button {
+  font-weight: 600;
+  color: white !important;
+  background: #000 !important;
+}
+
+.autoHeight {
+  height: 200px !important;
+  overflow-y: scroll;
+}
