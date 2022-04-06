@@ -39,6 +39,7 @@ npm install
 Past your **Deepgram secret key** & **YouTube api key**  on **.env**
 
 >REACT_APP_DEEPGRAM_SECRET_API_KEY=**< secret-key >**
+
 >REACT_APP_YOUTUBE_API_KEY=**< secret-key >**
 
 ```bash
