@@ -1,6 +1,8 @@
 
 # YouTube Clone with Deepgram AI Speech Recognition 🐱‍💻
 
+![img](https://res.cloudinary.com/practicaldev/image/fetch/s--6AtezU8t--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r8qvss3v9a9hmcuay55f.jpg)
+
 
 Overview: 👀
 
